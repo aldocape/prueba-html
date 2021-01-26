@@ -1,3 +1,51 @@
 body {
-    background-color: #00FFEC;
+    background-color: #6fa7a4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: justify;
+    line-height: 2em;
+}
+
+.post > article, footer > section:first-child {
+    border: 2px #CCC dotted;
+}
+
+footer form input:focus, footer form textarea:focus {
+    background-color: green;
+}
+
+nav {
+    top: 5px;
+    left: 5px;
+    position:fixed;
+}
+
+nav li {
+    display:inline-block;
+    padding: 15px;
+}
+
+.post > article {
+    display: inline-block;
+    padding: 15px 1vw;
+    box-sizing:border-box;
+    margin:0;
+    width:50%;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto
 }
