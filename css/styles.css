@@ -18,11 +18,17 @@ p {
     line-height: 2em;
 }
 
-.post > article, footer > section:first-child {
+footer > section:first-child {
     border: 2px #CCC dotted;
+    display: flex;
+    justify-content: center;
 }
 
 footer form input:focus, footer form textarea:focus {
+    background-color: green;
+}
+
+footer form input:hover, footer form textarea:hover {
     background-color: green;
 }
 
@@ -35,17 +41,58 @@ nav {
 nav li {
     display:inline-block;
     padding: 15px;
+    background-color:rgba(255,255,255);
+    opacity:0.6;
 }
 
-.post > article {
-    display: inline-block;
+nav li:hover {
+    cursor:pointer;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts > article {
+    border: 2px #CCC dotted;
     padding: 15px 1vw;
+
+    /*display: inline-block; */
     box-sizing:border-box;
     margin:0;
-    width:50%;
+    /*width:50%; */
+    
+    flex-basis: 50%;
+    text-align: center;
 }
 
-form {
+/* #footer > section:first-child {
+    display: flex;
+    justify-content: center;
+} */
+
+/* esta regla se combina con la de arriba, que está comentada porque se usa más arriba */
+/* y hace este css más responsive en el tema del centrado horizontal, que si usamos el margin 0 auto */ 
+
+#footer section form {
     width: 50%;
-    margin: 0 auto
+    background-color:rgba(245, 209, 224, 0.5);
+    padding:2vh 0;
+}
+
+/* otra manera de centrar el formulario, que es de tipo block
+
+#footer section form {
+    width: 50%;
+    margin: 2vh auto
+} */
+
+img {
+    width: 95%;
+    /* margin: 0 auto; */
+}
+
+.posts > article li {
+    list-style-type:none;
 }
